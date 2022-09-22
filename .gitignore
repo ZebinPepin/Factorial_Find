@@ -1,32 +1,24 @@
-# Prerequisites
-*.d
+#include <iostream>
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+using std::cout;
+using std::cin;
 
-# Precompiled Headers
-*.gch
-*.pch
+int main()
+{
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+        cout << "Enter a number: ";
+        int num;
+        cin >> num;
 
-# Fortran module files
-*.mod
-*.smod
+        // find factorial
+        int ans = 1;
+        int i = 1; // variable to count from 1 to num
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+        while (i <= num) {
+                ans = ans * i;
+                i = i + 1; }
 
-# Executables
-*.exe
-*.out
-*.app
+        cout << "Factorial of  " << num << " is " << ans << "\n";
+
+        return 0;
+}
